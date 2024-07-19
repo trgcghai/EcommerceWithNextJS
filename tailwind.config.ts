@@ -18,11 +18,14 @@ const config = {
       },
     },
     extend: {
+      margin: {
+        18: '4.5rem'
+      },
       colors: {
-        main: '#3572EF',
-        submain: '#3ABEF9',
-        'main-fade': 'A7E6FF',
-        'main-dark': '050C9C',
+        'main': '#3572EF',
+        'submain': '#3ABEF9',
+        'main-fade': '#A7E6FF',
+        'main-dark': '#050C9C',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

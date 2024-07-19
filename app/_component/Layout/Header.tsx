@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faHeart, faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons'
 import { OutlinedButton } from '../Buttons'
 import { useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Header() {
     const [hovered, setHovered] = useState({
@@ -15,9 +17,14 @@ export default function Header() {
     })
     return (
         <>
-            <div className="fixed top-0 right-0 left-0 bg-main">
+            <div className="fixed top-0 right-0 left-0 z-20 bg-main">
                 <div className="container px-0 mx-auto flex items-center justify-between py-2">
-                    <div className="font-bold text-white text-lg md:text-2xl lg:text-3xl">TechItems</div>
+                    <div className="font-bold text-main p-1 rounded-lg bg-white text-lg md:text-2xl lg:text-3xl">
+                        <Link href={'/'} className="flex items-center gap-2">
+                            <Image src={'/icon_256.png'} alt="" width={30} height={30} />
+                            TCHStores
+                        </Link>
+                    </div>
                     <div className="flex w-full max-w-lg items-center space-x-2 relative">
                         <div className="absolute right-2">
                             <FontAwesomeIcon icon={faMagnifyingGlass} className="text-gray-500 cursor-pointer" />
